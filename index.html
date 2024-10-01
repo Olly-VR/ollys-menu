@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ollys Menu [Web By ryzr3]</title>
+        <link rel="icon" type="image/x-icon" href="RYZ PFP.png">
+
+        <style>
+            :root {
+                --primary-color: white;
+                --primary-color-hover: white;
+                --text-color: white;
+                --secondary-text-color: white;
+                --overlay-color: white;
+                --header-bg: white;
+                --modal-bg: white;
+                --shadow-color: rgb(30, 30, 30);
+                --font-family: 'Audiowide', sans-serif;
+            }
+
+            body {
+                margin: 0px;
+                padding: 0px;
+                font-family: Arial;
+                background-color: rgb(20, 20, 20);
+            }
+
+            main {
+                margin: 20px;
+            }
+
+            ::-webkit-scrollbar {
+                width: 12px;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: rgb(30, 30, 30);
+                border-radius: 10px;
+                transition: background-color 0.3s ease;
+            }
+
+            ::-webkit-scrollbar-track {
+                background: #004370;
+            }
+
+            div {
+                display: block;
+                unicode-bidi: isolate;
+            }
+
+            .navbar ul {
+                list-style-type: none;
+                background-color: rgb(30, 30, 30);
+                padding: 0px;
+                margin: 0px;
+                overflow: hidden;
+            }
+
+            .navbar a {
+                color: rgb(215, 215, 215);
+                text-decoration: none;
+                padding: 20px;
+                display: block;
+                text-align: center;
+                transition: transform 0.3s;
+            }
+
+            .navbar a:hover {
+                color: white;
+                transform: scale(1.075);
+            }
+
+            .navbar li {
+                float: left;
+            }
+            
+            .units {
+                text-align: center;
+                text-decoration: none;
+                color: white;
+                display: block;
+            }
+
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 70px;
+                row-gap: 50px;
+            }
+
+            .image-container {
+                position: relative;
+                width: 100%;
+                height: 13.125rem;
+            }
+
+            .textTitle {
+                width: 100%;
+                margin-top: 10px;
+                background: white;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-align: center;
+                font-size: 14px;
+                font-weight: bold;
+                border-radius: 5px;
+                text-transform: uppercase;
+            }
+
+            .textTitleBig {
+                width: 100%;
+                margin-top: 10px;
+                background: white;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-align: center;
+                font-size: 56px;
+                font-weight: bold;
+                border-radius: 5px;
+                text-transform: uppercase;
+            }
+
+            .text {
+                width: 100%;
+                background: white;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-align: center;
+                font-size: 14px;
+                font-weight: bold;
+                border-radius: 5px;
+                text-transform: uppercase;
+            }
+
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 70px;
+                row-gap: 50px;
+                color: white;
+            }
+
+            .image {
+                display: block;
+                unicode-bidi: isolate;
+            }
+
+            .download-button {
+                background: rgb(0, 128, 255);
+                color: white;
+                padding: 15px 30px;
+                font-size: 1.2em;
+                font-weight: 700;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+            }
+
+            .download-button:hover {
+                transform: scale(1.1);
+            }
+
+            section {
+                padding-bottom: 50px;
+            }
+
+            .features-container {
+                margin: 100px 50px;
+                text-align: center;
+                z-index: 2;
+                position: relative;
+                animation: fadeInUp 1s ease-in-out;
+            }
+
+            .features-grid {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 40px;
+            }
+
+            .feature-box {
+                background: rgba(0, 128, 255);
+                padding: 20px;
+                border-radius: 12px;
+                width: 300px;
+                text-align: left;
+                transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s;
+                box-shadow: 0 8px 24px var(--shadow-color);
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            h2 {
+                display: block;
+                font-size: 1.5em;
+                margin-block-start: 0.83em;
+                margin-block-end: 0.83em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                font-weight: bold;
+                unicode-bidi: isolate;
+                color: white;
+            }
+
+            .feature-box h3 {
+                margin-top: 0;
+                color: var(--primary-color);
+                font-size: 1.6em;
+                transition: color 0.5s ease-in-out;
+            }
+
+            .feature-box p {
+                color: var(--secondary-text-color);
+                margin-bottom: 0;
+                font-size: 1.05em;
+                transition: color 0.5s ease-in-out;
+            }
+
+            .feature-box:hover {
+                transform: scale(1.1), ;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html"><div class="text">Home</div></a></li>
+                <li><a href="https://cdn.discordapp.com/attachments/1171482653753622541/1287831887435399279/Ollys_Paid_Menu.dll?ex=66fcdda8&is=66fb8c28&hm=a2dae1d60d70affe9c7004b73827feb87fee2aca6155ba76ab7ca56b0ccfecb2&" target="_blank"><div class="text">Download</div></a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <h10></h10>
+            <div class="textTitleBig">Ollys Menu</div>
+        </div>
+        <h5></h5>
+        <div class="container">
+            <a href="https://cdn.discordapp.com/attachments/1171482653753622541/1287831887435399279/Ollys_Paid_Menu.dll?ex=66fcdda8&is=66fb8c28&hm=a2dae1d60d70affe9c7004b73827feb87fee2aca6155ba76ab7ca56b0ccfecb2&" class="download-button">Download Menu</a>
+        </div>
+
+        <section id="features">
+            <div class="features-container">
+                <h2>Features</h2>
+                <div class="features-grid">
+                    <div class="feature-box">
+                        <h3>Movement</h3>
+                        <p>Platforms</p>
+                        <p>Teleport Gun</p>
+                        <p>Fly</p>
+                        <p>Ghost Monke</p>
+                        <p>Anti Report</p>
+                        <p>No Clip</p>
+                        <p>Steam Long Arms</p>
+                        <p>First Person Camera</p>
+                        <p>Beyblade</p>
+                        <p>Speed Boost</p>
+                    </div>
+                    
+                    <div class="feature-box">
+                        <h3>Safe</h3>
+                        <p>Anti Report</p>
+                        <p>Disable Quitbox</p>
+                        <p>Enable Quitbox</p>
+                    </div>
+                    
+                    <div class="feature-box">
+                        <h3>Rig</h3>
+                        <p>Spaz Rig</p>
+                        <p>Beyblade</p>
+                        <p>Head Spin X</p>
+                        <p>Head Spin Y</p>
+                        <p>Head Spin Z</p>
+                        <p>Upsidedown Head</p>
+                        <p>Helicopter</p>
+                        <p>No Finger Movement</p>
+                    </div>
+                    
+                    <div class="feature-box">
+                        <h3>Advantage</h3>
+                        <p>Flick Tag Gun</p>
+                        <p>Steam Long Arms</p>
+                        <p>Untag Self</p>
+                        <p>Untag All</p>
+                        <p>Tag All</p>
+                        <p>Tga Self</p>
+                    </div>
+                    
+                    <div class="feature-box">
+                        <h3>Wall Walk</h3>
+                        <p>Wall Walk</p>
+                    </div>
+                    
+                    <div class="feature-box">
+                        <h3>Visual</h3>
+                        <p>Casual ESP</p>
+                        <p>Casual Beacons</p>
+                        <p>Casual Box ESP</p>
+                        <p>Infection ESP</p>
+                        <p>Infection Beacons</p>
+                        <p>Infection Box ESP</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
